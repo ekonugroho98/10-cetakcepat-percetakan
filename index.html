@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CetakCepat — Percetakan Digital</title>
+  <meta name="description" content="CetakCepat: percetakan digital cepat & murah. Banner, kartu nama, stiker, undangan, dan lebih banyak lagi." />
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        primary: "#2563eb", secondary: "#facc15", dark: "#11203a", surface: "#f5f8ff",
+      } } },
+    };
+  </script>
+  <style>:root { --font-display: 'Sora', sans-serif; --font-body: 'Inter', sans-serif; }</style>
+  <script type="importmap">
+  { "imports": {
+    "react/": "https://esm.sh/react@^19.2.0/",
+    "react": "https://esm.sh/react@^19.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.0/"
+  } }
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/index.tsx"></script>
+</body>
+</html>
