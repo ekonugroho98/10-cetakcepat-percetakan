@@ -1,6 +1,12 @@
 import React from 'react';
 import { site } from '../data';
 
+const socialUrls: Record<string, (handle: string) => string> = {
+  instagram: (h) => `https://instagram.com/${h.replace("@", "")}`,
+  facebook: (h) => `https://facebook.com/${h.replace(/\s+/g, "")}`,
+  tiktok: (h) => `https://tiktok.com/${h.replace("@", "")}`,
+};
+
 export const Footer: React.FC = () => {
   const socials = Object.entries(site.social).filter(([, v]) => v);
   return (
@@ -15,11 +21,14 @@ export const Footer: React.FC = () => {
           </div>
           <p className="max-w-sm leading-relaxed text-white/60">{site.tagline}. {site.address}.</p>
           <div className="flex gap-3 flex-wrap">
-            {socials.map(([k, v]) => (
-              <span key={k} className="text-sm px-3 py-1.5 rounded-full bg-white/10 text-white/80">
-                {v}
-              </span>
-            ))}
+            {socials.map(([k, v]) => {
+              const url = socialUrls[k]?.(v as string) ?? "#";
+              return (
+                <a key={k} href={url} target="_blank" rel="noopener noreferrer" className="text-sm px-3 py-1.5 rounded-full bg-white/10 text-white/80 hover:bg-primary/20 hover:text-primary transition-colors">
+                  {v as string}
+                </a>
+              );
+            })}
           </div>
         </div>
 

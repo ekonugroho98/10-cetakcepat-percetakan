@@ -18,7 +18,7 @@ export const Testimonials: React.FC = () => {
             <figure key={item.name} className="bg-white rounded-2xl border border-dark/[0.07] p-7 flex flex-col gap-4">
               <div className="flex gap-0.5 text-primary">
                 {Array.from({ length: item.rating }).map((_, i) => (
-                  <Icon key={i} name="star" className="size-4 fill-current" />
+                  <svg key={i} viewBox="0 0 24 24" className="size-4 fill-primary text-primary"><path d="M12 2l3 7 7 .5-5.5 4.5 2 7L12 17l-6.5 4 2-7L2 9.5 9 9z" /></svg>
                 ))}
               </div>
               <blockquote className="text-dark/70 leading-relaxed">"{item.quote}"</blockquote>

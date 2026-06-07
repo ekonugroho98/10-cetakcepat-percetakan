@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
               {h.ctaPrimary}
             </a>
             <a
-              href="#pricing"
+              href="#services"
               className="bg-white border border-dark/10 text-dark px-7 py-3.5 rounded-full font-semibold hover:border-primary hover:text-primary transition-colors"
             >
               {h.ctaSecondary}

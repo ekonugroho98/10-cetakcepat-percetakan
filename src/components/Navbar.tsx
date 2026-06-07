@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
         scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-5 h-16 md:h-18 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-5 h-16 md:h-20 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2.5">
           <span className="grid place-items-center size-10 rounded-xl bg-primary text-white font-display font-bold">
             {site.logoMark}
